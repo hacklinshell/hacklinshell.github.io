@@ -186,17 +186,11 @@
 <li>不做除法，<strong>乘以逆矩阵</strong></li>
 </ul>
 <h1 id="6-逆矩阵"><a href="#6-逆矩阵" class="headerlink" title="6. 逆矩阵"></a>6. 逆矩阵</h1><ul>
-<li><strong>矩阵</strong> 与其<strong>逆相乘</strong>，结果是<strong>单位矩阵</strong><ul>
-<li><script type="math/tex; mode=display">A × A^{-1} = I</script></li>
-<li><script type="math/tex; mode=display">A^{-1} × A = I</script></li>
-</ul>
-</li>
+<li><p><strong>矩阵</strong> 与其<strong>逆相乘</strong>，结果是<strong>单位矩阵</strong></p>
+<script type="math/tex; mode=display">A × A^{-1} = I</script><script type="math/tex; mode=display">A^{-1} × A = I</script></li>
 <li>定义<ul>
-<li><script type="math/tex; mode=display">A的 逆（矩阵）是  A^{-1} , \,仅当：</script><ul>
-<li><script type="math/tex; mode=display">A × A^{-1} = A^{-1} × A = I</script></li>
+<li><script type="math/tex; mode=display">A的 逆（矩阵）是  A^{-1} , \,仅当： A × A^{-1} = A^{-1} × A = I</script></li>
 <li>有些矩阵是没有逆矩阵的(行列式等于0了)</li>
-</ul>
-</li>
 </ul>
 </li>
 <li><p>2 X 2 矩阵</p>
@@ -216,8 +210,8 @@
 </li>
 <li><p><strong>调换</strong> a 和 d 的位置，把 <strong>负号</strong>放在 b 和 c 前面，然后全部除以<strong>矩阵的行列式</strong> （ad-bc）</p>
 <ul>
-<li>例子如下： </li>
-<li><script type="math/tex; mode=display">\begin{bmatrix}
+<li><p>例子如下： </p>
+<script type="math/tex; mode=display">\begin{bmatrix}
   4 & 7 \\
   2 & 6 \\
   \end{bmatrix}^{-1} \quad = \quad
@@ -227,14 +221,11 @@
   \begin{bmatrix}
   6 & -7 \\
   -2 & 4 \\
-  \end{bmatrix}</script><p>-</p>
-</li>
-<li><script type="math/tex; mode=display">=\ \  \frac{1} {10} 
+  \end{bmatrix}</script><script type="math/tex; mode=display">=\ \  \frac{1} {10} 
 \begin{bmatrix}
 6 & -7 \\
 -2 & 4 \\
-\end{bmatrix}</script>-</li>
-<li><script type="math/tex; mode=display">= \ \  \begin{bmatrix}
+\end{bmatrix}</script><script type="math/tex; mode=display">= \ \  \begin{bmatrix}
 0.6 & -0.7 \\
 -0.2 & 0.4 \\
 \end{bmatrix}</script></li>
@@ -266,59 +257,51 @@ X_1 & X_2 \\
 \end{bmatrix}</script></li>
 <li><p>X 在前面：</p>
 <script type="math/tex; mode=display">\quad XA = B</script><ul>
-<li>求A的逆矩阵</li>
-<li><script type="math/tex; mode=display">
- \begin{bmatrix}
-     3 & 3.5 \\
-     3.2 & 3.6 \\
-     \end{bmatrix}^{-1} 
+<li><p>求A的逆矩阵</p>
+<script type="math/tex; mode=display">
+  \begin{bmatrix}
+      3 & 3.5 \\
+      3.2 & 3.6 \\
+      \end{bmatrix}^{-1} 
 
-     \quad = \quad
+      \quad = \quad
 
-     \frac{1} {3×3.6 - 3.5×3.2 } × 
+      \frac{1} {3×3.6 - 3.5×3.2 } × 
 
-     \begin{bmatrix}
-     3.6 & -3.5 \\
-     -3.2 & 3 \\
-     \end{bmatrix}
+      \begin{bmatrix}
+      3.6 & -3.5 \\
+      -3.2 & 3 \\
+      \end{bmatrix}
 
-     \quad = \quad
+      \quad = \quad
 
-     \begin{bmatrix}
-     -9 & -8.75 \\
-     8 & -7.5 \\
-     \end{bmatrix}</script></li>
+      \begin{bmatrix}
+      -9 & -8.75 \\
+      8 & -7.5 \\
+      \end{bmatrix}</script></li>
 <li><p>算出逆矩阵后我们便可以这样解：</p>
-</li>
-<li><script type="math/tex; mode=display">X = B × A^{-1}</script></li>
-<li><script type="math/tex; mode=display">
-\begin{bmatrix}
-X_1 & X_2 \\
-\end{bmatrix} \quad = \quad
+<script type="math/tex; mode=display">X = B × A^{-1}</script><script type="math/tex; mode=display">
+  \begin{bmatrix}
+  X_1 & X_2 \\
+  \end{bmatrix} \quad = \quad
 
-\begin{bmatrix}
-118.4 & 135.2 \\
-\end{bmatrix}  
+  \begin{bmatrix}
+  118.4 & 135.2 \\
+  \end{bmatrix}  
 
-\begin{bmatrix}
--9 & -8.75 \\
-8 & -7.5 \\
-\end{bmatrix}</script></li>
-<li><script type="math/tex; mode=display">= \begin{bmatrix}
+  \begin{bmatrix}
+  -9 & -8.75 \\
+  8 & -7.5 \\
+  \end{bmatrix}</script><script type="math/tex; mode=display">= \begin{bmatrix}
   118.4 × -9 \ +\  135.2 × 8 \quad \quad 118.4 × 8.75 + 135.2 × -7.5 \\
-  \end{bmatrix}</script></li>
-<li><script type="math/tex; mode=display">=  \begin{bmatrix}
+  \end{bmatrix}</script><script type="math/tex; mode=display">=  \begin{bmatrix}
   16 & 22 \\
   \end{bmatrix}</script></li>
 </ul>
 </li>
 <li><p>X 在后面:</p>
-<ul>
-<li><script type="math/tex; mode=display">AX = B</script></li>
-<li><script type="math/tex; mode=display">把 A^{-1} 放在前面\quad \quad A^{-1}AX =  A^{-1}B</script></li>
-<li><script type="math/tex; mode=display">A^{-1}A = I \quad  所以\quad\quad   IX \ =  A^{-1}B</script></li>
-<li><script type="math/tex; mode=display">X 在后面:\quad \quad X =  A^{-1}B</script></li>
-<li><script type="math/tex; mode=display">
+<script type="math/tex; mode=display">AX = B</script><ul>
+<li><script type="math/tex; mode=display">把 A^{-1} 放在前面\quad \quad A^{-1}AX =  A^{-1}B</script><script type="math/tex; mode=display">A^{-1}A = I \quad  所以\quad\quad   IX \ =  A^{-1}B</script><script type="math/tex; mode=display">X 在后面:\quad \quad X =  A^{-1}B</script><script type="math/tex; mode=display">
 \begin{bmatrix}
 3 & 3.2 \\
 3.5 & 3.6 \\
@@ -336,35 +319,57 @@ X_2  \\
 118.4  \\
 135.2  \\
 \end{bmatrix}</script></li>
-<li>同样求出 </li>
-<li><script type="math/tex; mode=display">
-\begin{bmatrix}
-X_1  \\
-X_2  \\
-\end{bmatrix}
-   =
-\begin{bmatrix}
-16  \\
-22  \\
-\end{bmatrix}</script><h1 id="8-矩阵转置"><a href="#8-矩阵转置" class="headerlink" title="8.矩阵转置"></a>8.矩阵转置</h1></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>把行和列对换。 我们在右上角放一个 “T” 来<ul>
-<li><script type="math/tex; mode=display">\begin{bmatrix}
-  6 & 4 & 24  \\
-  1 & -9 & 8  \\
-  \end{bmatrix}^T =
+<li><p>同样求出 </p>
+<script type="math/tex; mode=display">
   \begin{bmatrix}
-  6 & 1   \\
-  4 & -9   \\
-  24 & 8   \\
+  X_1  \\
+  X_2  \\
+  \end{bmatrix}
+      =
+  \begin{bmatrix}
+  16  \\
+  22  \\
   \end{bmatrix}</script></li>
 </ul>
 </li>
 </ul>
-</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">John Doe</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://yoursite.com/2019/03/14/manchine-math/manchine-math/">http://yoursite.com/2019/03/14/manchine-math/manchine-math/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/数学/">数学</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/2019/03/12/machine-learn/"><span>机器学习</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2019 By John Doe</div><div class="framework-info"><span>Driven - </span><a href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+</li>
+</ul>
+<h1 id="8-矩阵转置"><a href="#8-矩阵转置" class="headerlink" title="8.矩阵转置"></a>8.矩阵转置</h1><ul>
+<li><p>把行和列对换。 我们在右上角放一个 “T” 来</p>
+<script type="math/tex; mode=display">\begin{bmatrix}
+          6 & 4 & 24  \\
+          1 & -9 & 8  \\
+          \end{bmatrix}^T =
+          \begin{bmatrix}
+          6 & 1   \\
+          4 & -9   \\
+          24 & 8   \\
+          \end{bmatrix}</script></li>
+</ul>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">John Doe</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://yoursite.com/2019/03/14/manchine-math/manchine-math/">http://yoursite.com/2019/03/14/manchine-math/manchine-math/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/数学/">数学</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/2019/03/12/machine-learn/"><span>机器学习</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2019 By John Doe</div><div class="framework-info"><span>Driven - </span><a href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
   $('#nav').addClass('is-mobile')
   $('footer').addClass('is-mobile')
 }</script></body></html>
