@@ -9,8 +9,12 @@
   }
 } </script></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-矩阵数学定义"><span class="toc-number">1.</span> <span class="toc-text">1. 矩阵数学定义</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-为啥要有矩阵呢"><span class="toc-number">2.</span> <span class="toc-text">2. 为啥要有矩阵呢</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-矩阵运算"><span class="toc-number">3.</span> <span class="toc-text">3. 矩阵运算</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-单位矩阵"><span class="toc-number">4.</span> <span class="toc-text">4. 单位矩阵</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-矩阵除法"><span class="toc-number">5.</span> <span class="toc-text">5. 矩阵除法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-逆矩阵"><span class="toc-number">6.</span> <span class="toc-text">6. 逆矩阵</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-矩阵除法例子"><span class="toc-number">7.</span> <span class="toc-text">7. 矩阵除法例子</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-矩阵转置"><span class="toc-number">8.</span> <span class="toc-text">8.矩阵转置</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center">John Doe</div><div class="author-info__description text-center"></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">2</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">2</span></a></div></div></div><div id="content-outer"><div class="no-bg" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">Hexo</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span></div><div id="post-info"><div id="post-title">矩阵</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-03-14</time></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h1 id="1-矩阵数学定义"><a href="#1-矩阵数学定义" class="headerlink" title="1. 矩阵数学定义"></a>1. 矩阵数学定义</h1><ul>
 <li><p>一个由m行n列元素排列成的矩形阵列 如下</p>
-<p>  $$ A= \begin{bmatrix}<br>  a_{11} &amp;a_{12} &amp; \cdots &amp; a_{1n} \<br>  a_{21} &amp;a_{22} &amp; \cdots &amp; a_{2n}\<br>  \vdots &amp;\vdots &amp; \ddots &amp; \vdots\<br>  a_{m1} &amp;a_{m2} &amp; \cdots &amp; a_{mn}\<br>  \end{bmatrix}$$  </p>
-</li>
+<script type="math/tex; mode=display">A= \begin{bmatrix}
+  a_{11} &a_{12} & \cdots & a_{1n} \\
+  a_{21} &a_{22} & \cdots & a_{2n}\\
+  \vdots &\vdots & \ddots & \vdots\\
+  a_{m1} &a_{m2} & \cdots & a_{mn}\\
+  \end{bmatrix}</script></li>
 </ul>
 <h1 id="2-为啥要有矩阵呢"><a href="#2-为啥要有矩阵呢" class="headerlink" title="2. 为啥要有矩阵呢"></a>2. 为啥要有矩阵呢</h1><ul>
 <li><p>将三个地方三种水果的不同个价格调查后的数据用矩阵A表示如下</p>
@@ -21,45 +25,96 @@
 <li>第一列 苹果单价</li>
 <li>第二列 香蕉单价</li>
 <li><p>第三列 黄瓜单价</p>
-<p>$$A = \begin{bmatrix}<br>2.8 &amp;5.0 &amp;4.4 \<br>3.0 &amp;4.8 &amp;3.8 \<br>2.2 &amp;5.8 &amp;4.8 \<br>\end{bmatrix}$$    </p>
-</li>
+<script type="math/tex; mode=display">A = \begin{bmatrix}
+2.8 &5.0 &4.4 \\
+3.0 &4.8 &3.8 \\
+2.2 &5.8 &4.8 \\
+\end{bmatrix}</script></li>
 </ul>
 </li>
 <li><p>矩阵也是一种表示多维数据的方式</p>
 </li>
 <li><p>这时候要采购水果的需求 把需求用矩阵B列出</p>
-<p>  $$B = \begin{bmatrix}<br>  50 \<br>  60 \<br>  80 \<br>  \end{bmatrix}$$   </p>
-</li>
+<script type="math/tex; mode=display">B = \begin{bmatrix}
+  50 \\
+  60 \\
+  80 \\
+  \end{bmatrix}</script></li>
 <li><p>得到三个地方的价格（矩阵C） 后面再计算</p>
-<p>  $$C =  A × B = \begin{bmatrix}<br>  792 \<br>  742 \<br>  842 \<br>  \end{bmatrix}$$   </p>
-</li>
+<script type="math/tex; mode=display">C =  A × B = \begin{bmatrix}
+  792 \\
+  742 \\
+  842 \\
+  \end{bmatrix}</script></li>
 </ul>
 <h1 id="3-矩阵运算"><a href="#3-矩阵运算" class="headerlink" title="3. 矩阵运算"></a>3. 矩阵运算</h1><ul>
 <li><p>加法： 对称位置数相加(矩阵一定要大小相同,行和列要一样大)</p>
-<p>  $$ \begin{bmatrix}<br>  3 &amp; 8 \<br>  4 &amp; 6 \<br>  \end{bmatrix} +<br>  \begin{bmatrix}<br>  4 &amp; 0 \<br>  1 &amp; -9 \<br>  \end{bmatrix} =<br>  \begin{bmatrix}<br>  7 &amp; 8 \<br>  5 &amp; -3 \<br>  \end{bmatrix}$$ </p>
-<ul>
+<script type="math/tex; mode=display">\begin{bmatrix}
+  3 & 8 \\
+  4 & 6 \\
+  \end{bmatrix} +
+  \begin{bmatrix}
+  4 & 0 \\
+  1 & -9 \\
+  \end{bmatrix} =
+  \begin{bmatrix}
+  7 & 8 \\
+  5 & -3 \\
+  \end{bmatrix}</script><ul>
 <li>3 + 4 = 7 , 8 + 0 = 8 , 4 + 1 = 5 , 6 - 9 = -3 </li>
 </ul>
 </li>
 <li><p>负矩阵： 直接原有矩阵取负数就可以了</p>
-<p>  $$ - \begin{bmatrix}<br>  7 &amp; 8 \<br>  5 &amp; -3 \<br>  \end{bmatrix} =<br>  \begin{bmatrix}<br>  -7 &amp; -8 \<br>  -5 &amp; 3 \<br>  \end{bmatrix}$$</p>
-</li>
+<script type="math/tex; mode=display">- \begin{bmatrix}
+  7 & 8 \\
+  5 & -3 \\
+  \end{bmatrix} =
+  \begin{bmatrix}
+  -7 & -8 \\
+  -5 & 3 \\
+  \end{bmatrix}</script></li>
 <li><p>减 ： 对称位置的数相减</p>
-<p>  $$ \begin{bmatrix}<br>  3 &amp; 8 \<br>  4 &amp; 6 \<br>  \end{bmatrix} -<br>  \begin{bmatrix}<br>  4 &amp; 0 \<br>  1 &amp; -9 \<br>  \end{bmatrix} =<br>  \begin{bmatrix}<br>  -1 &amp; 8 \<br>  3 &amp; 15 \<br>  \end{bmatrix}$$</p>
-</li>
+<script type="math/tex; mode=display">\begin{bmatrix}
+  3 & 8 \\
+  4 & 6 \\
+  \end{bmatrix} -
+  \begin{bmatrix}
+  4 & 0 \\
+  1 & -9 \\
+  \end{bmatrix} =
+  \begin{bmatrix}
+  -1 & 8 \\
+  3 & 15 \\
+  \end{bmatrix}</script></li>
 <li><p>乘以常数 :常数被称为标量，这种乘法叫做”标量乘法”</p>
-<p>  $$ 2 × \begin{bmatrix}<br>  4 &amp; 0 \<br>  1 &amp; -9\<br>  \end{bmatrix} =<br>  \begin{bmatrix}<br>  8 &amp; 0 \<br>  8 &amp; -18\<br>  \end{bmatrix} $$</p>
-</li>
+<script type="math/tex; mode=display">2 × \begin{bmatrix}
+  4 & 0 \\
+  1 & -9\\
+  \end{bmatrix} = 
+  \begin{bmatrix}
+  8 & 0 \\
+  8 & -18\\
+  \end{bmatrix}</script></li>
 <li><p>矩阵相乘 <strong>m行n列 乘以n行q列 得到的是 m行q列的矩阵</strong> 第一个矩阵的列n 必须等于第二个矩阵的行n</p>
-<p>  $$ \begin{bmatrix}<br>  1 &amp; 2 &amp; 3 \<br>  4 &amp; 5 &amp; 6 \<br>  \end{bmatrix} ×<br>  \begin{bmatrix}<br>  7 &amp; 8 \<br>  9 &amp; 10 \<br>  11 &amp; 12 \<br>  \end{bmatrix} =<br>  \begin{bmatrix}<br>  58 &amp; 64 \<br>  139 &amp; 154 \<br>  \end{bmatrix} $$</p>
-<ul>
+<script type="math/tex; mode=display">\begin{bmatrix}
+  1 & 2 & 3 \\
+  4 & 5 & 6 \\
+  \end{bmatrix} ×
+  \begin{bmatrix}
+  7 & 8 \\
+  9 & 10 \\
+  11 & 12 \\
+  \end{bmatrix} =
+  \begin{bmatrix}
+  58 & 64 \\
+  139 & 154 \\
+  \end{bmatrix}</script><ul>
 <li><p>矩阵相乘要计算行与列的<strong>点积</strong></p>
 <ul>
 <li><p>点积就是把对称的元素相乘然后结果加起来</p>
 <ul>
 <li><p>矢量a和矢量b相乘的点积</p>
-<p>$$a \cdot b = a_x \ × \ b_x \  + \  a_y × \ b_y $$         </p>
-</li>
+<script type="math/tex; mode=display">a \cdot b = a_x \ × \ b_x \  + \  a_y × \ b_y</script></li>
 </ul>
 </li>
 <li>第一行和第一列 相乘 (1, 2, 3) • (7, 9, 11) = 1 × 7 + 2 × 9 + 3 × 11 = 58</li>
@@ -72,16 +127,35 @@
 </ul>
 </li>
 <li><p>矩阵相乘 没有交换律</p>
-<p>  $$AB\not=BA$$</p>
-<ul>
+<script type="math/tex; mode=display">AB\not=BA</script><ul>
 <li><p>例如</p>
 <ul>
 <li><p>AB 位置</p>
-<p>  $$ \begin{bmatrix}<br>  1 &amp; 2 \<br>  3 &amp; 4  \<br>  \end{bmatrix} ×<br>  \begin{bmatrix}<br>  2 &amp; 0 \<br>  1 &amp; 2  \<br>  \end{bmatrix} =<br>  \begin{bmatrix}<br>  4 &amp; 4 \<br>  10 &amp; 8  \<br>  \end{bmatrix} $$</p>
-</li>
+<script type="math/tex; mode=display">\begin{bmatrix}
+  1 & 2 \\
+  3 & 4  \\
+  \end{bmatrix} ×
+  \begin{bmatrix}
+  2 & 0 \\
+  1 & 2  \\
+  \end{bmatrix} =
+  \begin{bmatrix}
+  4 & 4 \\
+  10 & 8  \\
+  \end{bmatrix}</script></li>
 <li><p>BA位置</p>
-<p>  $$ \begin{bmatrix}<br>  2 &amp; 0 \<br>  1 &amp; 2  \<br>  \end{bmatrix} ×<br>  \begin{bmatrix}<br>  1 &amp; 2 \<br>  3 &amp; 4  \<br>  \end{bmatrix} =<br>  \begin{bmatrix}<br>  2 &amp; 4 \<br>  7 &amp; 10  \<br>  \end{bmatrix} $$</p>
-</li>
+<script type="math/tex; mode=display">\begin{bmatrix}
+  2 & 0 \\
+  1 & 2  \\
+  \end{bmatrix} ×
+  \begin{bmatrix}
+  1 & 2 \\
+  3 & 4  \\
+  \end{bmatrix} =
+  \begin{bmatrix}
+  2 & 4 \\
+  7 & 10  \\
+  \end{bmatrix}</script></li>
 </ul>
 </li>
 </ul>
@@ -91,8 +165,11 @@
 </ul>
 <h1 id="4-单位矩阵"><a href="#4-单位矩阵" class="headerlink" title="4. 单位矩阵"></a>4. 单位矩阵</h1><ul>
 <li><p>3 X 3 的单位矩阵</p>
-<p>  $$ I = \begin{bmatrix}<br>  1 &amp; 0 &amp; 0\<br>  0 &amp; 1 &amp; 0\<br>  0 &amp; 0 &amp; 1\<br>  \end{bmatrix} $$ </p>
-</li>
+<script type="math/tex; mode=display">I = \begin{bmatrix}
+  1 & 0 & 0\\
+  0 & 1 & 0\\
+  0 & 0 & 1\\
+  \end{bmatrix}</script></li>
 <li><p>单位矩阵 是矩阵领域里的 <strong>1</strong></p>
 <ul>
 <li>单位矩阵是<strong>方行</strong>的,(行与列数目相同)</li>
@@ -101,47 +178,66 @@
 </ul>
 </li>
 <li><p>它是个特别的矩阵，和它相乘的矩阵后者不变</p>
-<p>   $$ A × I = A$$<br>   $$ I × A = A$$ </p>
-</li>
+<script type="math/tex; mode=display">A × I = A</script><script type="math/tex; mode=display">I × A = A</script></li>
 </ul>
 <h1 id="5-矩阵除法"><a href="#5-矩阵除法" class="headerlink" title="5. 矩阵除法"></a>5. 矩阵除法</h1><ul>
 <li><p>不把矩阵进行相除,做下面处理</p>
-<p>   $$ A / B = A \ × \  (1/B) \ =\ A × B^{ -1 }$$<br>   $$  B^{-1} 是 B 的逆矩阵$$ </p>
-</li>
+<script type="math/tex; mode=display">A / B = A \ × \  (1/B) \ =\ A × B^{ -1 }</script><script type="math/tex; mode=display">B^{-1} 是 B 的逆矩阵</script></li>
 <li>不做除法，<strong>乘以逆矩阵</strong></li>
 </ul>
 <h1 id="6-逆矩阵"><a href="#6-逆矩阵" class="headerlink" title="6. 逆矩阵"></a>6. 逆矩阵</h1><ul>
 <li><strong>矩阵</strong> 与其<strong>逆相乘</strong>，结果是<strong>单位矩阵</strong><ul>
-<li>$$ A × A^{-1} = I$$</li>
-<li>$$  A^{-1} × A = I$$</li>
+<li><script type="math/tex; mode=display">A × A^{-1} = I</script></li>
+<li><script type="math/tex; mode=display">A^{-1} × A = I</script></li>
 </ul>
 </li>
 <li>定义<ul>
-<li>$$  A的 逆（矩阵）是  A^{-1} , \,仅当：$$ <ul>
-<li>$$ A × A^{-1} = A^{-1} × A = I$$</li>
+<li><script type="math/tex; mode=display">A的 逆（矩阵）是  A^{-1} , \,仅当：</script><ul>
+<li><script type="math/tex; mode=display">A × A^{-1} = A^{-1} × A = I</script></li>
 <li>有些矩阵是没有逆矩阵的(行列式等于0了)</li>
 </ul>
 </li>
 </ul>
 </li>
 <li><p>2 X 2 矩阵</p>
-<p> $$ \begin{bmatrix}<br>  a &amp; b \<br>  c &amp; d \<br>  \end{bmatrix}^{-1} = </p>
-<p>  \frac{1} {ad - bc }</p>
-<p>  \begin{bmatrix}<br>  d &amp; -b \<br>  -c &amp; a \<br>  \end{bmatrix}</p>
-<p>   $$ </p>
-<ul>
+<script type="math/tex; mode=display">\begin{bmatrix}
+  a & b \\
+  c & d \\
+  \end{bmatrix}^{-1} = 
+
+  \frac{1} {ad - bc }
+
+  \begin{bmatrix}
+  d & -b \\
+  -c & a \\
+  \end{bmatrix}</script><ul>
 <li><strong>ad - bc</strong>是矩阵的<strong>行列式</strong></li>
 </ul>
 </li>
 <li><p><strong>调换</strong> a 和 d 的位置，把 <strong>负号</strong>放在 b 和 c 前面，然后全部除以<strong>矩阵的行列式</strong> （ad-bc）</p>
 <ul>
 <li>例子如下： </li>
-<li><p>$$ \begin{bmatrix}<br>  4 &amp; 7 \<br>  2 &amp; 6 \<br>  \end{bmatrix}^{-1} \quad = \quad</p>
-<p>  \frac{1} {4×6 - 7×2 }</p>
-<p>  \begin{bmatrix}<br>  6 &amp; -7 \<br>  -2 &amp; 4 \<br>  \end{bmatrix} $$<br>-</p>
+<li><script type="math/tex; mode=display">\begin{bmatrix}
+  4 & 7 \\
+  2 & 6 \\
+  \end{bmatrix}^{-1} \quad = \quad
+
+  \frac{1} {4×6 - 7×2 }
+
+  \begin{bmatrix}
+  6 & -7 \\
+  -2 & 4 \\
+  \end{bmatrix}</script><p>-</p>
 </li>
-<li>$$ =\ \  \frac{1} {10}<br>\begin{bmatrix}<br>6 &amp; -7 \<br>-2 &amp; 4 \<br>\end{bmatrix} $$<br>-</li>
-<li>$$ = \ \  \begin{bmatrix}<br>0.6 &amp; -0.7 \<br>-0.2 &amp; 0.4 \<br>\end{bmatrix} $$ </li>
+<li><script type="math/tex; mode=display">=\ \  \frac{1} {10} 
+\begin{bmatrix}
+6 & -7 \\
+-2 & 4 \\
+\end{bmatrix}</script>-</li>
+<li><script type="math/tex; mode=display">= \ \  \begin{bmatrix}
+0.6 & -0.7 \\
+-0.2 & 0.4 \\
+\end{bmatrix}</script></li>
 </ul>
 </li>
 </ul>
@@ -153,66 +249,118 @@
 </li>
 <li><p>编写矩阵(注意行列位置) </p>
 <ul>
-<li><p>$$<br>\begin{bmatrix}<br>X_1 &amp; X_2 \<br>\end{bmatrix}</p>
-<p>\quad × \quad</p>
-<p>\begin{bmatrix}<br>3 &amp; 3.5 \<br>3.2 &amp; 3.6 \<br>\end{bmatrix}<br>\quad = \quad<br>\begin{bmatrix}<br>118.4 &amp; 135.2 \<br>\end{bmatrix}<br>$$ </p>
-</li>
+<li><script type="math/tex; mode=display">
+\begin{bmatrix}
+X_1 & X_2 \\
+\end{bmatrix}
+
+\quad × \quad
+
+\begin{bmatrix}
+3 & 3.5 \\
+3.2 & 3.6 \\
+\end{bmatrix}
+\quad = \quad
+\begin{bmatrix}
+118.4 & 135.2 \\
+\end{bmatrix}</script></li>
 <li><p>X 在前面：</p>
-<p>  $$\quad XA = B $$ </p>
-<ul>
+<script type="math/tex; mode=display">\quad XA = B</script><ul>
 <li>求A的逆矩阵</li>
-<li><p>$$<br> \begin{bmatrix}</p>
-<pre><code>3 &amp; 3.5 \\
-3.2 &amp; 3.6 \\
-\end{bmatrix}^{-1} 
+<li><script type="math/tex; mode=display">
+ \begin{bmatrix}
+     3 & 3.5 \\
+     3.2 & 3.6 \\
+     \end{bmatrix}^{-1} 
 
-\quad = \quad
+     \quad = \quad
 
-\frac{1} {3×3.6 - 3.5×3.2 } × 
+     \frac{1} {3×3.6 - 3.5×3.2 } × 
 
-\begin{bmatrix}
-3.6 &amp; -3.5 \\
--3.2 &amp; 3 \\
-\end{bmatrix}
+     \begin{bmatrix}
+     3.6 & -3.5 \\
+     -3.2 & 3 \\
+     \end{bmatrix}
 
-\quad = \quad
+     \quad = \quad
 
-\begin{bmatrix}
--9 &amp; -8.75 \\
-8 &amp; -7.5 \\
-\end{bmatrix}
-</code></pre><p> $$</p>
-</li>
+     \begin{bmatrix}
+     -9 & -8.75 \\
+     8 & -7.5 \\
+     \end{bmatrix}</script></li>
 <li><p>算出逆矩阵后我们便可以这样解：</p>
 </li>
-<li>$$X = B × A^{-1}$$  </li>
-<li><p>$$<br>\begin{bmatrix}<br>X_1 &amp; X_2 \<br>\end{bmatrix} \quad = \quad</p>
-<p>\begin{bmatrix}<br>118.4 &amp; 135.2 \<br>\end{bmatrix}  </p>
-<p>\begin{bmatrix}<br>-9 &amp; -8.75 \<br>8 &amp; -7.5 \<br>\end{bmatrix} $$</p>
-</li>
-<li>$$ = \begin{bmatrix}<br>  118.4 × -9 \ +\  135.2 × 8 \quad \quad 118.4 × 8.75 + 135.2 × -7.5 \<br>  \end{bmatrix} $$</li>
-<li>$$ =  \begin{bmatrix}<br>  16 &amp; 22 \<br>  \end{bmatrix} $$</li>
+<li><script type="math/tex; mode=display">X = B × A^{-1}</script></li>
+<li><script type="math/tex; mode=display">
+\begin{bmatrix}
+X_1 & X_2 \\
+\end{bmatrix} \quad = \quad
+
+\begin{bmatrix}
+118.4 & 135.2 \\
+\end{bmatrix}  
+
+\begin{bmatrix}
+-9 & -8.75 \\
+8 & -7.5 \\
+\end{bmatrix}</script></li>
+<li><script type="math/tex; mode=display">= \begin{bmatrix}
+  118.4 × -9 \ +\  135.2 × 8 \quad \quad 118.4 × 8.75 + 135.2 × -7.5 \\
+  \end{bmatrix}</script></li>
+<li><script type="math/tex; mode=display">=  \begin{bmatrix}
+  16 & 22 \\
+  \end{bmatrix}</script></li>
 </ul>
 </li>
 <li><p>X 在后面:</p>
 <ul>
-<li>$$AX = B $$</li>
-<li>$$把 A^{-1} 放在前面\quad \quad A^{-1}AX =  A^{-1}B $$</li>
-<li>$$ A^{-1}A = I \quad  所以\quad\quad   IX \ =  A^{-1}B$$ </li>
-<li>$$X 在后面:\quad \quad X =  A^{-1}B $$ </li>
-<li><p>$$<br>\begin{bmatrix}<br>3 &amp; 3.2 \<br>3.5 &amp; 3.6 \<br>\end{bmatrix}</p>
-<p>\quad × \quad</p>
-<p>\begin{bmatrix}<br>X_1  \<br>X_2  \<br>\end{bmatrix}</p>
-<p>\quad = \quad<br>\begin{bmatrix}<br>118.4  \<br>135.2  \<br>\end{bmatrix}<br>$$ </p>
-</li>
+<li><script type="math/tex; mode=display">AX = B</script></li>
+<li><script type="math/tex; mode=display">把 A^{-1} 放在前面\quad \quad A^{-1}AX =  A^{-1}B</script></li>
+<li><script type="math/tex; mode=display">A^{-1}A = I \quad  所以\quad\quad   IX \ =  A^{-1}B</script></li>
+<li><script type="math/tex; mode=display">X 在后面:\quad \quad X =  A^{-1}B</script></li>
+<li><script type="math/tex; mode=display">
+\begin{bmatrix}
+3 & 3.2 \\
+3.5 & 3.6 \\
+\end{bmatrix}
+
+\quad × \quad
+
+\begin{bmatrix}
+X_1  \\
+X_2  \\
+\end{bmatrix}
+
+\quad = \quad
+\begin{bmatrix}
+118.4  \\
+135.2  \\
+\end{bmatrix}</script></li>
 <li>同样求出 </li>
-<li>$$<br>\begin{bmatrix}<br>X_1  \<br>X_2  \<br>\end{bmatrix}<br>   =<br>\begin{bmatrix}<br>16  \<br>22  \<br>\end{bmatrix}<br>$$<h1 id="8-矩阵转置"><a href="#8-矩阵转置" class="headerlink" title="8.矩阵转置"></a>8.矩阵转置</h1></li>
+<li><script type="math/tex; mode=display">
+\begin{bmatrix}
+X_1  \\
+X_2  \\
+\end{bmatrix}
+   =
+\begin{bmatrix}
+16  \\
+22  \\
+\end{bmatrix}</script><h1 id="8-矩阵转置"><a href="#8-矩阵转置" class="headerlink" title="8.矩阵转置"></a>8.矩阵转置</h1></li>
 </ul>
 </li>
 </ul>
 </li>
 <li>把行和列对换。 我们在右上角放一个 “T” 来<ul>
-<li>$$ \begin{bmatrix}<br>  6 &amp; 4 &amp; 24  \<br>  1 &amp; -9 &amp; 8  \<br>  \end{bmatrix}^T =<br>  \begin{bmatrix}<br>  6 &amp; 1   \<br>  4 &amp; -9   \<br>  24 &amp; 8   \<br>  \end{bmatrix}<br>$$</li>
+<li><script type="math/tex; mode=display">\begin{bmatrix}
+  6 & 4 & 24  \\
+  1 & -9 & 8  \\
+  \end{bmatrix}^T =
+  \begin{bmatrix}
+  6 & 1   \\
+  4 & -9   \\
+  24 & 8   \\
+  \end{bmatrix}</script></li>
 </ul>
 </li>
 </ul>
